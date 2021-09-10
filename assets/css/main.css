@@ -20,7 +20,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid red;
   margin: 0 21px 0 27px;
 }
 
@@ -68,7 +67,6 @@ header .icons .icon-search {
 }
 
 .account-info .balance {
-  border: 1px solid blue;
   height: 36px;
   text-align: center;
   margin-top: 16px;
@@ -127,6 +125,57 @@ header .icons .icon-search {
   padding: 0 37px 0 30px;
 }
 
-.transaction button {
-  margin-top: 4.3px;
+.transaction > img {
+  border: 1px solid red;
+  display: block;
+}
+
+.transaction .piggy-bank {
+  border: 1px solid blue;
+  margin-top: 18.55px;
+  overflow: hidden;
+}
+
+.transaction .piggy-bank .pig {
+  border: 1px solid pink;
+  width: 43.2%; /* 162 / 375 */
+  height: 47px;
+  border-radius: 6px;
+  background-color: var(--color-gray05);
+  float: left;
+  margin-right: 13px;
+}
+
+.transaction .piggy-bank .pig::after {
+  margin-right: 0;
+}
+
+.transaction .piggy-bank .pig p {
+  width: 59.876543%; /* 97 / 162 */
+  height: inherit;
+  font-size: var(--font-small);
+  font-weight: var(--font-normal);
+  color: var(--color-white);
+}
+
+.transaction .piggy-bank .pig .blue {
+  background-color: var(--color-blue02);
+}
+
+.transaction .piggy-bank .pig .orange {
+  background-color: var(--color-orange03);
+}
+
+.transaction .piggy-bank .pig .sand {
+  background-color: var(--color-sand);
+}
+
+/* 날짜 별 거래내역 */
+.transaction-histories {
+  border: 1px solid green;
+  margin-top: 16px;
+}
+
+.transaction-histories .transaction-daily {
+  border: 1px solid yellowgreen;
 }
