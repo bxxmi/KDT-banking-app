@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
   <body>
     <!-- 레이아웃 -->
@@ -12,18 +19,19 @@
       <!-- 헤더 -->
       <header>
         <div class="profile-image">
-          <img src="#" alt="" />
+          <img src="./assets/images/profile.svg" alt="프로필 사진" />
         </div>
         <h1 class="title">생활비</h1>
         <div class="icons">
-          <img src="#" alt="QR코드" class="icon-qr" />
-          <img src="#" alt="검색" class="icon-search" />
+          <img src="./assets/images/easypay.svg" alt="간편결제" class="icon-qr" />
+          <img src="./assets/images/search.svg" alt="검색" class="icon-search" />
         </div>
       </header>
       <!-- 계좌 정보 -->
       <section class="account-info">
         <div class="account-number"></div>
-        <div class="balance"></div>
+        <div class="balance"><span class="balance-text"></span>원</div>
+        <button class="btn-transfer">이체</button>
         <div class="target">
           <div class="state">
             <div class="graph graph-state">
@@ -74,7 +82,7 @@
           </li>
           <li class="pig-create">
             <button>
-              <img src="" alt="저금통 만들기" class="icon-plus" />
+              <img src="./assets/images/addpig.svg" alt="저금통 만들기" class="icon-plus" />
               저금통 만들기
             </button>
           </li>
@@ -151,22 +159,22 @@
       <ul class="nav-items">
         <li class="nav-item">
           <a href="#">
-            <img src="" alt="" />
+            <img src="./assets/images/account.svg" alt="계좌" />
           </a>
         </li>
         <li class="nav-item">
           <a href="#">
-            <img src="" alt="" />
+            <img src="./assets/images/options.svg" alt="조정" />
           </a>
         </li>
         <li class="nav-item">
           <a href="#">
-            <img src="" alt="" />
+            <img src="./assets/images/chatbot.svg" alt="챗봇" />
           </a>
         </li>
         <li class="nav-item">
           <a href="#">
-            <img src="" alt="" />
+            <img src="./assets/images/more.svg" alt="더보기" />
           </a>
         </li>
       </ul>

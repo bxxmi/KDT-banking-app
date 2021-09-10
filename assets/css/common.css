@@ -1,4 +1,6 @@
 :root {
+  font-family: "Noto Sans KR", sans-serif;
+
   --font-xlarge: 24px;
   --font-large: 18px;
   --font-medium: 14px;
