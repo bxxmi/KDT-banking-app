@@ -1,0 +1,25 @@
+@import url(common.css);
+@import url(reset.css);
+
+nav {
+  display: none;
+}
+
+.wrap {
+margin-top: 56px;
+}
+
+/* 헤더 */
+header {
+  height: 43px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid red;
+  margin: 0 21px 0 27px;
+}
+
+header .title {
+  font-weight: var(--font-normal);
+  font-size: var(--font-large);
+}
