@@ -1,6 +1,11 @@
 @import url(common.css);
 @import url(reset.css);
 
+
+body {
+  background-color: var(--body-color);
+}
+
 nav {
   display: none;
 }
@@ -22,4 +27,39 @@ header {
 header .title {
   font-weight: var(--font-normal);
   font-size: var(--font-large);
+}
+
+/* 계좌정보 */
+.account-info {
+  height: 155px;
+  border: 1px solid blue;
+  margin: 33px 48px 24px;
+  background-color: var(--color-white);
+  box-shadow: 0px 0px 16px rgba(226, 191, 66, 0.19);
+  border-radius: 12px;
+}
+
+.account-info .account-number {
+  color: var(--color-gray01);
+  font-weight: var(--font-normal);
+  font-size: var(--font-medium);
+  border: 1px solid red;
+  text-align: center;
+}
+
+.account-info > button {
+  width: 27px;
+  height: 21px;
+  outline: none;
+  border: 1px solid green;
+  background-color: var(--color-white);
+  font-size: var(--font-medium);
+  font-weight: var(--font-normal);
+  padding: 0;
+}
+
+
+/* 거래내역 */
+section.transaction {
+  display: none;
 }
