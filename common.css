@@ -1,5 +1,4 @@
 :root {
-  /* font */
   --font-xlarge: 24px;
   --font-large: 18px;
   --font-medium: 14px;
@@ -40,4 +39,5 @@
   --body-color: #eeebe5;
   --bar-color: #dadada;
   --color-white: white;
+  /* 더 추가사항이 있을까요?*/
 }
