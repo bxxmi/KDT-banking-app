@@ -29,6 +29,10 @@ header .title {
   font-size: var(--font-large);
 }
 
+header .icons .icon-search {
+  margin-left: 18px;
+}
+
 /* 계좌정보 */
 .account-info {
   height: 155px;
@@ -37,6 +41,7 @@ header .title {
   background-color: var(--color-white);
   box-shadow: 0px 0px 16px rgba(226, 191, 66, 0.19);
   border-radius: 12px;
+  position: relative;
 }
 
 .account-info .account-number {
@@ -45,21 +50,83 @@ header .title {
   font-size: var(--font-medium);
   border: 1px solid red;
   text-align: center;
+  margin-top: 14px;
 }
 
 .account-info > button {
   width: 27px;
   height: 21px;
+  padding: 0;
   outline: none;
   border: 1px solid green;
   background-color: var(--color-white);
   font-size: var(--font-medium);
   font-weight: var(--font-normal);
-  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
+.account-info .balance {
+  border: 1px solid blue;
+  height: 36px;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.account-info .balance .balance-text {
+  font-weight: var(--font-normal);
+  font-size: var(--font-xlarge);
+  line-height: 36px;
+}
+
+.account-info .target {
+  border: 1px solid orange;
+  margin: 16px 38px 0 32px;
+  position: relative;
+}
+
+.account-info .state-bar {
+  border: 1px solid purple;
+}
+
+.account-info .state-bar > img {
+  display: block;
+}
+
+.account-info .state-bar .bar_bg {
+  border: 1px solid red;
+  width: 202px;
+  height: 17px;
+  margin: 0 auto;
+}
+
+.account-info .state-bar .bar {
+  width: 128px;
+  height: 6px;
+}
+
+/* 광고 */
+.ad {
+  margin: 24px 70px 21px 43px;
+  font-size: var( --font-medium);
+  font-weight: var(--font-normal);
+  text-align: center;
+}
+
+.ad > a {
+  color: var(--color-black01);
+  margin-left: 6px;
+}
 
 /* 거래내역 */
-section.transaction {
-  display: none;
+.transaction {
+  background-color: #F5F5F5;
+  box-shadow: 0px -5px 14px rgba(189, 144, 28, 0.08);
+  border-radius: 30px 30px 0px 0px;
+  padding: 0 37px 0 30px;
+}
+
+.transaction button {
+  margin-top: 4.3px;
 }
