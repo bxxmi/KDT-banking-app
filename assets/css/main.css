@@ -110,10 +110,6 @@ header .icons .icon-search {
   align-items: center;
 }
 
-.account-info .state-bar > img {
-  display: block;
-}
-
 .account-info .state-bar .bar-bg {
   position: absolute;
 }
@@ -170,19 +166,26 @@ header .icons .icon-search {
 /* 거래내역 */
 .transaction {
   background-color: #F5F5F5;
+  height: 660px;
   box-shadow: 0px -5px 14px rgba(189, 144, 28, 0.08);
   border-radius: 30px 30px 0px 0px;
   padding: 0 37px 0 30px;
+  position: relative;
 }
 
 .transaction > img {
-  border: 1px solid red;
-  display: block;
-}
+  position: absolute;
+  top: 4.3px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} 
 
 .transaction .piggy-bank {
   border: 1px solid blue;
-  margin-top: 18.55px;
+  position: absolute;
+  height: 49px;
+  top: 23px;
+  left: 30px;
   overflow: hidden;
 }
 
@@ -222,10 +225,40 @@ header .icons .icon-search {
 
 /* 날짜 별 거래내역 */
 .transaction-histories {
-  border: 1px solid green;
-  margin-top: 16px;
+  border: 1px solid tomato;
+  position: relative;
+  top: 88px;
 }
 
-.transaction-histories .transaction-daily {
-  border: 1px solid yellowgreen;
+.transaction-daily {
+  border: 1px solid yellowgreen; 
+}
+
+.date {
+  font-weight: var(--font-bold);
+  font-size: var(--font-medium);
+}
+
+.cost {
+  font-weight: var(--font-normal);
+  font-size: var(--font-medium);
+  color: var(--color-gray03);
+  position: absolute;
+  right: 0;
+}
+
+.in {
+  color: var(--color-orange02);
+}
+
+.transaction-item {
+  margin-top: 8px;
+  font-weight: var(--font-demilight);
+  font-size: var(--font-large);
+  color: var(--color-darkgray);
+}
+
+.transaction-item .item-cost {
+  position: absolute;
+  right: 0;
 }
