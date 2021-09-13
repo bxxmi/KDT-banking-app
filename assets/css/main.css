@@ -13,6 +13,8 @@ body::-webkit-scrollbar{
 
 .wrap {
 margin-top: 56px;
+border: 1px solid blue;
+margin-bottom: 76px;
 }
 
 /* 헤더 */
@@ -272,13 +274,11 @@ header .icons .icon-search {
 /* 네비게이션 */
 .nav {
   background-color: var(--nav-bg);
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 58px;
   left: 0;
   bottom: 0;
-  top: 1192px;
-  margin-top: 31.37px;
 }
 
 .nav .nav-items {
@@ -289,189 +289,135 @@ header .icons .icon-search {
 
 /* =====================매니지먼트부분===================== */
 /* 헤더 ~ 기준 금액 설정 */
-header .manage {
-  font-size: var(--font-xlarge);
-  position: absolute;
+.manage {
   width: 93px;
   height: 36px;
-  left: 30px;
-  top: 77px;
   line-height: 36px;
-  letter-spacing: -0.24px;
+  letter-spacing: -.24px;
+  margin-top: 33px;
+  font-size: var(--font-xlarge);
+}
+
+.base {
+  margin: 33px 21px 0 27px;
 }
 
 .base-setting {
+  height: 27px;
   width: 100%;
 }
 
-.base-setting .sub-title {
-  position: absolute;
+.base .sub-title {
   width: 99px;
-  height: 27px;
-  top: 146px;
-  left: 29px;
-  font-weight: var(--font-normal);
+  line-height: 26.64px;
   font-size: var(--font-large);
-  line-height: 27px;
-  letter-spacing: -0.24px;
+  font-weight: var(--font-normal);
+  letter-spacing: -.24px;
   color: var(--color-darkgray);
+  float: left;
+  margin-bottom: 28px;
 }
 
-.base-setting .current-base-amount {
-  position: absolute;
+.base .current-base-amount {
   width: 131px;
   height: 36px;
-  top: 142px;
-  right: 38px;
-  font-weight: var(--font-normal);
-  font-size: var(--font-xlarge);
   line-height: 36px;
-  letter-spacing: -0.24px;
+  font-size: var(--font-xlarge);
+  font-weight: var(--font-normal);
+  letter-spacing: -.24px;
   color: var(--color-orange02);
+  float: right;
+  margin-top: -5px;
+}
+
+.base::after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
 .graph-state {
-  position: absolute;
+  width: 100%;
   height: 9.18px;
-  top: 211.71px;
-  right: 38px;
-  left: 29px;
-  background-color: #c4c4c4;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: var(--color-gray04);
+  margin-top: 28px;
+  border-radius: 3px;
+  position: relative;
+}
+
+.state-bar {
+  width: calc(100% - 112.83px);
+  height: 9.18px;
+  background-color: #FFDB4C;
   border-radius: 3px;
 }
 
-.graph-state .state-bar {
-  position: absolute;
-  height: 9.18px;
-  width: calc(100% - 112px);
-  left: 0;
-  background-color: #ffdb4c;
-  border-radius: 3px;
-}
-
-.graph-state .state-pointer {
-  position: absolute;
+.state-pointer {
   width: 8px;
   height: 28px;
-  right: 78.91px;
-  background-color: #FF5F00;
-  border-radius: 2px;
-}
-
-.btn-close {
-  background-color: transparent;
-  outline: 0;
-  border: 0;
+  background-color: var(--color-orange02);
   position: absolute;
-  height: 21px;
-  right: 13px;
-  top: 44px;
-  line-height: 21px;
-  letter-spacing: -0.24px;
-  font-size: var(--font-medium);
-  font-weight: var(--font-light);
-  cursor: pointer;
+  margin-top: -18.82px;
+  right: 78.91px;
 }
 
 /* 일간 리포트 */
+.daily-report {
+  border: 1px solid red;
+  margin: 58px 21px 0 27px;
+}
+
 .daily-report .sub-title {
-  position: absolute;
+  border: 1px solid burlywood;
   width: 86px;
   height: 27px;
-  top: 288px;
-  left: 29px;
-  font-weight: var(--font-normal);
+  line-height: 26.64px;
   font-size: var(--font-large);
-  line-height: 27px;
-  letter-spacing: -0.24px;
+  font-weight: var(--font-normal);
+  letter-spacing: -.24px;
   color: var(--color-darkgray);
 }
 
 .daily-report .graph-daily {
-  border: 1px solid green;
-  position: absolute;
-  height: 198px;
-  top: 315px;
-  right: 37px;
-  left: 31px;
   margin-top: 17px;
+  border: 1px solid pink;
+  height: 198px;
+}
+
+.btn-close {
+  position: absolute;
+  width: 38px;
+  height: 21px;
+  top: 56px;
+  right: 21px;
+  outline: none;
+  border: 0;
+  background-color: transparent;
+  font-weight: var(--font-light);
+  font-size: var(--font-medium);
+  line-height: 21px;
+  letter-spacing: -.24px;
 }
 
 /* 월간 지출 패턴 */
+.monthly-pattern {
+  border: 1px solid red;
+  margin: 46px 21px 0 27px;
+}
+
 .monthly-pattern .sub-title {
-  position: absolute;
+  border: 1px solid pink;
   width: 100px;
   height: 27px;
-  top: 559px;
-  left: 29px;
-  font-weight: var(--font-normal);
+  line-height: 26.64px;
   font-size: var(--font-large);
-  line-height: 27px;
-  letter-spacing: -0.24px;
+  font-weight: var(--font-normal);
+  letter-spacing: -.24px;
   color: var(--color-darkgray);
 }
 
 .monthly-pattern .graph-circle {
+  margin-top: 16px;
   border: 1px solid purple;
-  position: absolute;
   height: 308px;
-  top: 604px;
-  right: 30px;
-  left: 37px;
-}
-
-.monthly-pattern .categories {
-  position: absolute;
-  height: 233.63px;
-  top: 926px;
-  left: 35px;
-  right: 32px;
-  border: 1px solid red;
-}
-
-.monthly-pattern .category-item {
-  border: 1px solid blue;
-  width: 100%;
-  height: 41.23px;
-  position: absolute;
-  margin-top: 10.77px;
-}
-
-.monthly-pattern .category-item:nth-child(1) {
-  margin-top: 0;
-}
-
-.monthly-pattern .category-image {
-  position: absolute;
-  left: 35px;
-  line-height: 32px;
-  border: 1px solid yellowgreen;
-}
-
-.monthly-pattern .category-name {
-  position: absolute;
-  width: 50px;
-  height: 27px;
-  left: 84px;
-  font-weight: 350;
-  font-size: 18px;
-  line-height: 27px;
-  letter-spacing: -0.24px;
-  color: #000000;
-}
-
-.monthly-pattern .category-cost {
-position: absolute;
-right: 0;
-width: 70px;
-height: 27px;
-font-weight: 350;
-font-size: 18px;
-line-height: 27px;
-letter-spacing: -0.24px;
-color: #858585;
 }
