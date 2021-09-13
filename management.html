@@ -16,7 +16,9 @@
   <body>
     <!-- 레이아웃 -->
     <div class="wrap">
-      <h1 class="title">지출 관리</h1>
+      <header>
+        <h1 class="title manage">지출 관리</h1>
+      </header>
       <main>
         <!-- 기준금액설정 -->
         <section class="base">
@@ -24,13 +26,12 @@
             <div class="base-setting">
               <h2 class="sub-title">기준금액설정</h2>
               <span class="current-base-amount"><span>2,100,000</span>원</span>
+              <div class="graph graph-state">
+                <div class="state-bar"></div>
+                <div class="state-pointer"></div>
+              </div>
             </div>
-            <div class="graph graph-state">
-              <div class="state-bar"></div>
-              <div class="state-pointer"></div>
-            </div>
-          </div>
-        </section>
+          </section>
         <!-- 일간 리포트 -->
         <section class="daily-report">
           <h2 class="sub-title">일간 리포트</h2>
@@ -42,11 +43,11 @@
           <div class="graph graph-circle"></div>
           <ul class="categories">
             <li class="category-item">
-              <div class="category-info">
+              <!-- <div class="category-info"> -->
                 <img src="./assets/images/car.svg" alt="주유비" class="category-image" />
                 <span class="category-name">주유비</span>
-              </div>
-              <span class="category-cost"><span>56,000</span>원</span>
+              <!-- </div> -->
+                <span class="category-cost"><span>56,000</span>원</span>
             </li>
           </ul>
         </section>
@@ -54,7 +55,7 @@
       <button class="btn-close">닫기</button>
     </div>
     <!-- 네비게이션 -->
-    <nav>
+    <nav class="managenav">
       <ul class="nav-items">
         <li class="nav-item">
           <a href="#">
