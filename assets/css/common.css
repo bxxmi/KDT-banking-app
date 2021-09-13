@@ -24,6 +24,7 @@
   --color-orange03: #f58f29;
   --color-yellow01: #feb700;
   --color-yellow02: #fec229;
+  --color-yellow03: #ffdb4c;
   --color-blue01: #0009de;
   --color-blue02: #0057bd;
   --color-navy01: #235789;
@@ -41,5 +42,6 @@
   --body-color: #eeebe5;
   --bar-color: #dadada;
   --color-white: white;
+  --color-border:#dadada;
   /* 더 추가사항이 있을까요?*/
 }
