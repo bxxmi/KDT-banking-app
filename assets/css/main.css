@@ -6,10 +6,6 @@ body {
   background-color: var(--body-color);
 }
 
-nav {
-  display: none;
-}
-
 .wrap {
 margin-top: 56px;
 }
@@ -25,6 +21,9 @@ header {
 
 header .title {
   font-weight: var(--font-normal);
+}
+
+title .home {
   font-size: var(--font-large);
 }
 
@@ -165,8 +164,8 @@ header .icons .icon-search {
 
 /* 거래내역 */
 .transaction {
+  height: 637px;
   background-color: #F5F5F5;
-  height: 660px;
   box-shadow: 0px -5px 14px rgba(189, 144, 28, 0.08);
   border-radius: 30px 30px 0px 0px;
   padding: 0 37px 0 30px;
@@ -225,13 +224,12 @@ header .icons .icon-search {
 
 /* 날짜 별 거래내역 */
 .transaction-histories {
-  border: 1px solid tomato;
   position: relative;
   top: 88px;
 }
 
-.transaction-daily {
-  border: 1px solid yellowgreen; 
+.transactions {
+  margin-bottom: 38px;
 }
 
 .date {
@@ -253,7 +251,10 @@ header .icons .icon-search {
 
 .transaction-item {
   margin-top: 8px;
-  font-weight: var(--font-demilight);
+  height: 34px;
+  border-bottom: 1px solid #DCDCDC;
+  line-height: 27px;
+  font-weight: var(--font-light);
   font-size: var(--font-large);
   color: var(--color-darkgray);
 }
@@ -261,4 +262,21 @@ header .icons .icon-search {
 .transaction-item .item-cost {
   position: absolute;
   right: 0;
+}
+
+/* 네비게이션 */
+nav {
+  background-color: var(--nav-bg);
+  height: 58px;
+}
+
+nav .nav-items {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+}
+
+/* =====================매니지먼트부분===================== */
+.management-wrap {
+  position: relative;
 }
