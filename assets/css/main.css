@@ -2,7 +2,6 @@
 @import url(reset.css);
 
 body {
-  background-color: var(--body-color);
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
@@ -12,9 +11,8 @@ body::-webkit-scrollbar{
 }
 
 .wrap {
-margin-top: 56px;
-border: 1px solid blue;
-margin-bottom: 76px;
+  margin-top: 56px;
+  min-width: 375px;
 }
 
 /* 헤더 */
@@ -288,6 +286,11 @@ header .icons .icon-search {
 }
 
 /* =====================매니지먼트부분===================== */
+.management {
+  background-color: var(--color-white);
+  margin-bottom: 88.37px;
+}
+
 /* 헤더 ~ 기준 금액 설정 */
 .manage {
   width: 93px;
@@ -368,7 +371,6 @@ header .icons .icon-search {
 }
 
 .daily-report .sub-title {
-  border: 1px solid burlywood;
   width: 86px;
   height: 27px;
   line-height: 26.64px;
@@ -401,12 +403,10 @@ header .icons .icon-search {
 
 /* 월간 지출 패턴 */
 .monthly-pattern {
-  border: 1px solid red;
   margin: 46px 21px 0 27px;
 }
 
 .monthly-pattern .sub-title {
-  border: 1px solid pink;
   width: 100px;
   height: 27px;
   line-height: 26.64px;
@@ -420,4 +420,49 @@ header .icons .icon-search {
   margin-top: 16px;
   border: 1px solid purple;
   height: 308px;
+}
+
+.monthly-pattern .categories {
+  border: 1px solid cadetblue;
+  height: 233.63px;
+  margin-top: 14px;
+  position: relative;
+}
+
+.monthly-pattern .category-item {
+  border: 1px solid blue;
+  height: 40px;
+  /* margin-bottom: 12px; */
+}
+
+.monthly-pattern .category-item .category-image {
+  display: block;
+  margin-top: 6px;
+}
+
+.monthly-pattern .category-item .category-name {
+  width: 50px;
+  height: 27px;
+  font-weight: var(--font-demilight);
+  font-size: var(--font-large);
+  line-height: 27px;
+  text-align: right;
+  letter-spacing: -.24px;
+  position: absolute;
+  top: 4px;
+  left: 49px;
+}
+
+.monthly-pattern .category-item .category-cost {
+  width: 70px;
+  height: 27px;
+  font-weight: var(--font-demilight);
+  font-size: var(--font-large);
+  line-height: 27px;
+  text-align: right;
+  letter-spacing: -.24px;
+  color: var(--color-gray01);
+  position: absolute;
+  top: 4px;
+  right: 0;
 }
