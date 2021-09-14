@@ -15,7 +15,11 @@ body::-webkit-scrollbar{
   min-width: 375px;
 }
 
-/* 헤더 */
+/* 홈 헤더 */
+.home {
+  background-color: var(--body-color);
+}
+
 header {
   height: 43px;
   display: flex;
@@ -26,10 +30,6 @@ header {
 
 header .title {
   font-weight: var(--font-normal);
-}
-
-title .home {
-  font-size: var(--font-large);
 }
 
 header .icons .icon-qr {
