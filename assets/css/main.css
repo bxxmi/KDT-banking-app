@@ -15,21 +15,25 @@ body::-webkit-scrollbar{
   min-width: 375px;
 }
 
-/* 홈 헤더 */
-.home {
-  background-color: var(--body-color);
-}
-
 header {
-  height: 43px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin: 0 21px 0 27px;
 }
 
 header .title {
   font-weight: var(--font-normal);
+  letter-spacing: -.24px;
+}
+
+/* 홈 헤더 */
+.home {
+  background-color: var(--body-color);
+}
+
+.home > header {
+  height: 43px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 header .icons .icon-qr {
@@ -270,34 +274,34 @@ header .icons .icon-search {
 }
 
 /* 네비게이션 */
-.nav {
+nav {
   background-color: var(--nav-bg);
   position: fixed;
   width: 100%;
   height: 58px;
-  left: 0;
   bottom: 0;
 }
 
-.nav .nav-items {
+nav .nav-items {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 15px 30px;
 }
 
 /* =====================매니지먼트부분===================== */
+/* 헤더 ~ 기준 금액 설정 */
 .management {
-  background-color: var(--color-white);
-  margin-bottom: 88.37px;
+  margin-bottom: 89px;
 }
 
-/* 헤더 ~ 기준 금액 설정 */
-.manage {
+.management > header {
   width: 93px;
   height: 36px;
+  margin-top: 77px;
+}
+
+.management .title {
   line-height: 36px;
-  letter-spacing: -.24px;
-  margin-top: 33px;
   font-size: var(--font-xlarge);
 }
 
@@ -305,7 +309,7 @@ header .icons .icon-search {
   margin: 33px 21px 0 27px;
 }
 
-.base-setting {
+.base .base-setting {
   height: 27px;
   width: 100%;
 }
@@ -366,7 +370,6 @@ header .icons .icon-search {
 
 /* 일간 리포트 */
 .daily-report {
-  border: 1px solid red;
   margin: 58px 21px 0 27px;
 }
 
@@ -381,9 +384,7 @@ header .icons .icon-search {
 }
 
 .daily-report .graph-daily {
-  margin-top: 17px;
-  border: 1px solid pink;
-  height: 198px;
+  margin-top: 20px;
 }
 
 .btn-close {
@@ -399,6 +400,7 @@ header .icons .icon-search {
   font-size: var(--font-medium);
   line-height: 21px;
   letter-spacing: -.24px;
+  cursor: pointer;
 }
 
 /* 월간 지출 패턴 */
@@ -417,44 +419,54 @@ header .icons .icon-search {
 }
 
 .monthly-pattern .graph-circle {
+  position: relative;
+}
+
+.monthly-pattern .graph-circle #doughnut-chart {
   margin-top: 16px;
-  border: 1px solid purple;
   height: 308px;
 }
 
+.monthly-pattern .monthly-cost {
+  text-align: center;
+  font-size: 24px;
+}
+
 .monthly-pattern .categories {
-  border: 1px solid cadetblue;
   height: 233.63px;
   margin-top: 14px;
   position: relative;
 }
 
 .monthly-pattern .category-item {
-  border: 1px solid blue;
   height: 40px;
-  /* margin-bottom: 12px; */
+  margin-bottom: 6px;
+}
+
+.monthly-pattern .category-item::after {
+  margin-bottom: 0;
 }
 
 .monthly-pattern .category-item .category-image {
   display: block;
   margin-top: 6px;
+  float: left;
 }
 
 .monthly-pattern .category-item .category-name {
-  width: 50px;
+  width: 100px;
   height: 27px;
   font-weight: var(--font-demilight);
   font-size: var(--font-large);
   line-height: 27px;
-  text-align: right;
   letter-spacing: -.24px;
-  position: absolute;
-  top: 4px;
-  left: 49px;
+  float: left;
+  margin-left: 49px;
+  margin-top: 4px;
 }
 
 .monthly-pattern .category-item .category-cost {
-  width: 70px;
+  width: 100px;
   height: 27px;
   font-weight: var(--font-demilight);
   font-size: var(--font-large);
@@ -462,7 +474,6 @@ header .icons .icon-search {
   text-align: right;
   letter-spacing: -.24px;
   color: var(--color-gray01);
-  position: absolute;
-  top: 4px;
-  right: 0;
+  float: right;
+  margin-top: 4px;
 }
