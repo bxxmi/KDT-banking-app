@@ -8,7 +8,18 @@ request.send();
 
 request.onload = () => {
   const bankingData = request.response;
-  console.log(bankingData);
+  const bankingList = bankingData['bankList'];
+  const dailyHistory = document.querySelector('.transaction-histories');
+  let date, income, classify, history, price;
+
+  // 값 저장
+  for(let i=0; i<bankingList.length; i++) {
+    date = bankingList[i]['date'];
+    income = bankingList[i]['income'];
+    classify = bankingList[i]['classify'];
+    history = bankingList[i]['history'];
+    price = bankingList[i]['price'];
+  }
 }
 
 // 슬라이드 이벤트
