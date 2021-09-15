@@ -1,6 +1,6 @@
 @import url(common.css);
 @import url(reset.css);
-
+/* common */
 body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
@@ -10,8 +10,17 @@ body::-webkit-scrollbar{
   display:none;
 }
 
+.piggy-bank {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.piggy-bank::-webkit-scrollbar{ 
+  display:none;
+}
+
 .wrap {
-  margin-top: 56px;
+  padding-top: 56px;
   min-width: 375px;
 }
 
@@ -22,6 +31,16 @@ header {
 header .title {
   font-weight: var(--font-normal);
   letter-spacing: -.24px;
+}
+
+.up {
+  margin-top: -250px;
+  transition: all ease 1s 0s;
+}
+
+.down {
+  margin-top: 0;
+  transition: all ease 1s 0s;
 }
 
 /* 홈 헤더 */
@@ -36,13 +55,18 @@ header .title {
   align-items: center;
 }
 
-header .icons .icon-qr {
+.home > header > .title {
+  height: 27px;
+  line-height: 27px;
+  font-size: var(--font-large);
+}
+
+header .icons img {
   cursor: pointer;
 }
 
 header .icons .icon-search {
   margin-left: 18px;
-  cursor: pointer;
 }
 
 /* 계좌정보 */
@@ -69,6 +93,22 @@ header .icons .icon-search {
   letter-spacing: -0.24px;
 }
 
+.account-info .balance {
+  height: 36px;
+  text-align: center;
+  position: absolute;
+  top: 51px;
+  right: 59.22px;
+  left: 59.22px;
+}
+
+.account-info .balance .balance-text {
+  font-weight: var(--font-normal);
+  font-size: var(--font-xlarge);
+  line-height: 35.52px;
+  letter-spacing: 2px;
+}
+
 .account-info > .btn-transfer {
   width: 27px;
   height: 21px;
@@ -86,50 +126,31 @@ header .icons .icon-search {
   cursor: pointer;
 }
 
-.account-info .balance {
-  height: 36px;
-  text-align: center;
-  position: absolute;
-  top: 51px;
-  right: 59.22px;
-  left: 59.22px;
-}
-
-.account-info .balance .balance-text {
-  font-weight: var(--font-normal);
-  font-size: var(--font-xlarge);
-  line-height: 35.52px;
-  letter-spacing: 2px;
-}
-
-.account-info .target {
-  position: absolute;
-  top: 103px;
+.account-info .graph-state {
+  height: 6px;
+  background-color: var(--color-gray04);
+  border-radius: 3px;
+  top: 110px;
   right: 45px;
   left: 32px;
+  position: absolute;
 }
 
 .account-info .state-bar {
-  width: 202px;
+  width: calc(100% - 112.83px);
+  height: 6px;
+  background-color: #FFDB4C;
+  border-radius: 3px;
+}
+
+.account-info .state-pointer {
+  width: 4px;
   height: 17px;
-  margin: 0 auto;
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.account-info .state-bar .bar-bg {
+  background-color: var(--color-orange02);
   position: absolute;
-}
-
-.account-info .state-bar .bar {
-  position: absolute;
-}
-
-.account-info .state-bar .bar-pointer {
-  position: absolute;
-  top: -2px;
-  left: 150px;
+  margin-top: -12px;
+  right: 78.91px;
+  border-radius: 2px;
 }
 
 .account-info .target-img {
@@ -138,16 +159,18 @@ header .icons .icon-search {
   position: absolute;
   top: 98px;
   right: 14px;
-  text-align: center; 
-  cursor: pointer;
 } 
 
-.account-info .target-img > img {
+.account-info .btn-expenditure {
   width: 14px;
-  vertical-align: middle;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
 }
 
-.account-info .state-notice {
+.account-info .target-notice {
   text-align: center;
   font-size: var(--font-medium);
   font-weight: var(--font-normal);
@@ -160,6 +183,8 @@ header .icons .icon-search {
 
 /* 광고 */
 .ad {
+  height: 20px;
+  line-height: 20px;
   margin: 24px 70px 21px 43px;
   font-size: var( --font-medium);
   font-weight: var(--font-normal);
@@ -181,60 +206,88 @@ header .icons .icon-search {
   position: relative;
 }
 
-.transaction > img {
+.btn-area {
+  height: 17px;
+}
+
+.transaction .up-button {
   position: absolute;
   top: 4.3px;
   left: 50%;
   transform: translate(-50%, -50%);
+  cursor: pointer;
 } 
 
 .transaction .piggy-bank {
-  border: 1px solid blue;
-  position: absolute;
+  min-width: 375px;
+  width: 100%;
   height: 49px;
-  top: 23px;
-  left: 30px;
-  overflow: hidden;
+  margin-top: 11px;
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.transaction .piggy-bank::after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
 .transaction .piggy-bank .pig {
-  border: 1px solid pink;
-  width: 43.2%; /* 162 / 375 */
-  height: 47px;
+  width: 150px;
+  height: 49px;
   border-radius: 6px;
   background-color: var(--color-gray05);
-  float: left;
   margin-right: 13px;
+  float: left;
 }
 
-.transaction .piggy-bank .pig::after {
-  margin-right: 0;
-}
-
-.transaction .piggy-bank .pig p {
-  width: 59.876543%; /* 97 / 162 */
+.transaction .piggy-bank .pig .pig-goal {
+  width: 97px;
   height: inherit;
+  background-color: var(--color-orange02);
   font-size: var(--font-small);
   font-weight: var(--font-normal);
   color: var(--color-white);
+  border-radius: 6px;
 }
 
-.transaction .piggy-bank .pig .blue {
-  background-color: var(--color-blue02);
+.transaction .piggy-bank .pig .pig-goal span {
+  width: 60px;
+  height: 18px;
+  float: left;
+  margin-left: 13px;
 }
 
-.transaction .piggy-bank .pig .orange {
-  background-color: var(--color-orange03);
+.transaction .piggy-bank .pig .pig-goal span:nth-child(1) {
+  margin-top: 8px;
 }
 
-.transaction .piggy-bank .pig .sand {
-  background-color: var(--color-sand);
+.transaction .piggy-bank .pig-create {
+  width: 150px;
+  height: 49px;
+  display: flex;
+}
+
+.transaction .piggy-bank .btn-create {
+  width: 100%;
+  color: var(--color-orange02);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.transaction .piggy-bank .btn-create .icon-plus {
+  float: left;
+  margin-right: 10px;
 }
 
 /* 날짜 별 거래내역 */
 .transaction-histories {
   position: relative;
-  top: 88px;
+  margin-top: 16px;
 }
 
 .transactions {
@@ -297,7 +350,7 @@ nav .nav-items {
 .management > header {
   width: 93px;
   height: 36px;
-  margin-top: 77px;
+  margin-top: 12px;
 }
 
 .management .title {
@@ -343,7 +396,7 @@ nav .nav-items {
   clear: both;
 }
 
-.graph-state {
+.management .graph-state {
   width: 100%;
   height: 9.18px;
   background-color: var(--color-gray04);
@@ -352,14 +405,14 @@ nav .nav-items {
   position: relative;
 }
 
-.state-bar {
+.management .state-bar {
   width: calc(100% - 112.83px);
   height: 9.18px;
   background-color: #FFDB4C;
   border-radius: 3px;
 }
 
-.state-pointer {
+.management .state-pointer {
   width: 8px;
   height: 28px;
   background-color: var(--color-orange02);
