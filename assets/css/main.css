@@ -288,7 +288,6 @@ header .icons .icon-search {
 .transaction-histories {
   position: relative;
   margin-top: 16px;
-  border: 1px solid red;
 }
 
 .transactions {
@@ -313,7 +312,6 @@ header .icons .icon-search {
 }
 
 .transaction-item {
-  border: 1px solid red;
   margin-top: 8px;
   height: 34px;
   border-bottom: 1px solid #DCDCDC;
