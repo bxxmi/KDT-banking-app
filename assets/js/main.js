@@ -56,8 +56,10 @@ function bankData(obj) {
 
 // 슬라이드 이벤트
 const btn = document.querySelector('.up-button'); 
-const bg = document.querySelector('.transaction');
+const bg = document.querySelector('.transaction'); 
+const wrap = document.querySelector('.transaction-histories');
 
 btn.addEventListener('click', () => {
   bg.classList.toggle('up');
+  wrap.style.maxHeight = 'none';
 });
