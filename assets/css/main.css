@@ -38,11 +38,6 @@ header .title {
   transition: all ease 1s 0s;
 }
 
-.down {
-  margin-top: 0;
-  transition: all ease 1s 0s;
-}
-
 /* 홈 헤더 */
 .home {
   background-color: var(--body-color);
@@ -198,7 +193,6 @@ header .icons .icon-search {
 
 /* 거래내역 */
 .transaction {
-  height: 637px;
   background-color: #F5F5F5;
   box-shadow: 0px -5px 14px rgba(189, 144, 28, 0.08);
   border-radius: 30px 30px 0px 0px;
@@ -288,6 +282,14 @@ header .icons .icon-search {
 .transaction-histories {
   position: relative;
   margin-top: 16px;
+  max-height: 400px;
+  overflow: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.transaction-histories::-webkit-scrollbar{ 
+  display:none;
 }
 
 .transactions {
