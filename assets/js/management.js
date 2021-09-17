@@ -8,7 +8,7 @@ const barChart = new Chart(canvas1, {
     datasets: [{
       backgroundColor: '#38C976',
       data:
-      [20000, 40000, 60000, 80000, 100000]
+      [20000, 40000, 60000, 80000, 100000, 69200, 0, 21499, 35000, 12300, 2222, 40000, 90000,57000, 20000]
     }]
   },
   options: {
@@ -43,6 +43,7 @@ var doughnutChart = new Chart(canvas2, {
           '#FEC229',
           '#C4C4C4'
         ],
+        cutout: '85%',
         borderWidth: 0
       }
     ]
